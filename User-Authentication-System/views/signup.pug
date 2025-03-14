@@ -1,0 +1,27 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width,initial-scale=1.0")
+    link(rel="stylesheet", href="css/signup.css", attr)
+    title Authentication
+  body
+    h3 Sign Up
+    form(action="/signup" method="post")
+      .input-box
+        input(type="text" name="username" placeholder="Username")
+      - if (msg)
+        .info
+          h3= msg
+      .input-box
+        button(type="submit") Sign Up
+    div 
+      | Have an account? 
+      a(href="/login") Login
+    .info
+      h3 
+        | Username must be at least 
+        | 5 and 10 characters long
+        | A-Z, a-z and  0-9 allowed
+    footer
+      | &copy; Obaro, 2025.

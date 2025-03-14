@@ -1,0 +1,24 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width,initial-scale=1.0")
+    link(rel="stylesheet", href="css/login.css", attr)
+    title Authentication
+  body
+    h3 Log In
+    form(action="/login" method="post")
+      .input-box
+        input(type="text" name="username" placeholder="Username")
+      .input-box
+        input(type="password" name="password" placeholder="Password")
+      - if (msg)
+        .info
+          h3= msg
+      .input-box
+        button(type="submit") Log In
+    div 
+      | Don't have an account? 
+      a(href="/signup") Create an account
+    footer
+      | &copy; Obaro, 2025.
