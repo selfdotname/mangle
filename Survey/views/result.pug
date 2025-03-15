@@ -1,0 +1,26 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width,initial-scale=1.0")
+    link(rel="stylesheet", href="css/result.css")
+    script(src="libs/jquery-3.7.1.min.js")
+    script(src="js/result.js")
+    title Survey App
+  body
+    .container
+      h2 Survey Results
+    - if (questions)
+      .container
+        .question-card
+          each question in questions
+            h3= question.question
+            each option in question.options
+              div
+                span= `${option.text} - `
+                span.percent= option.poll
+    - else 
+      h3 Unable to fetch survey questions at the moment
+    .container
+      footer 
+        p &copy; Obaro, 2025.

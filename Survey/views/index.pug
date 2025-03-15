@@ -1,0 +1,30 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width,initial-scale=1.0")
+    link(rel="stylesheet", href="css/index.css")
+    title Survey App
+  body
+    .container
+      - if (msg)
+        h1.error= msg
+      h2 Survey
+    - if (questions)
+      .container
+        form(action="/submit-survey" method="post")
+          .question-card
+            each question in questions
+              h3= question.question
+              each option in question.options
+                div
+                  label
+                    input(type="radio" name=`${question.question}` value=`${option.text}`)
+                    span= option.text
+            .btn-container
+              button(type="submit") Submit
+    - else 
+      h3 Unable to fetch survey questions at the moment
+    .container
+      footer 
+        p &copy; Obaro, 2025.

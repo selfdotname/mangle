@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+h2,
+h3,
+button,
+h1 {
+  font-family: montserrat;
+}
+input,
+span,
+a,
+p {
+  font-family: lora;
+}
+.btn-container {
+  margin-top: 16px;
+}
+.btn-container button {
+  font-weight: bold;
+  padding: 8px;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.question-card {
+  margin-bottom: 24px;
+}
+label {
+  line-height: 24px;
+}
+label span {
+  margin-left: 16px;
+}
+.error {
+  color: #f00;
+}
