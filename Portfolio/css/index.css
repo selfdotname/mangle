@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+img {
+  width: 300px;
+  aspect-ratio: 1.85/1;
+  object-fit: contain;
+}
+h1,
+h2,
+h3 {
+  font-family: Montserrat;
+}
+a,
+p,
+footer {
+  font-family: Lora;
+}
+h2 {
+  text-align: center;
+}
+footer,
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 48px;
+}
+body {
+  margin: 0;
+}
+.skills {
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  min-width: fit-content;
+  background-image: linear-gradient(to bottom, #000, transparent);
+}
+.skills .skill {
+  transition: background-color 1s ease, background-size 1s ease, box-shadow 1.5s ease;
+  border-radius: 16px;
+}
+.skills .skill:hover {
+  box-shadow: 0 0 16px #aaa;
+}
+.skills .skill h3 {
+  background-color: #000;
+  color: #fff;
+  padding: 24px;
+  text-align: center;
+}
+.skills .node:hover {
+  background-color: #4bae4f;
+}
+.skills .express:hover {
+  background-color: #393939;
+}
+.skills .mongodb:hover {
+  background-color: #499d4a;
+}
+.skills .gtrio:hover {
+  background-color: #f1672c;
+}
+.skills .jquery:hover {
+  background-color: #0868ab;
+}
+header h1 {
+  font-size: 56px;
+}
+header h3 {
+  background-image: linear-gradient(to right, #f00, #0f0, #00f);
+  width: fit-content;
+  background-clip: text;
+  color: transparent;
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  background-color: #ccc;
+  padding: 40px;
+  transition: 1s ease;
+}
+.projects .project {
+  width: 300px;
+  aspect-ratio: 1/1;
+  transition: 1s ease;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: #fff;
+  text-align: center;
+}
+.projects .project:hover {
+  box-shadow: 0 0 16px #ccc;
+}
+.more {
+  display: flex;
+  justify-content: center;
+  background-color: #ccc;
+}
+.connect {
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+}
+.connect img {
+  width: 48px;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+}
