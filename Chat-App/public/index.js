@@ -1,5 +1,5 @@
 const url = URL.parse(window.location.href)
-const socket = new WebSocket(`ws://${url.host}`)
+const socket = new WebSocket(`wss://${url.host}`)
 
 socket.onopen = function() {
   console.log("connected to server")
