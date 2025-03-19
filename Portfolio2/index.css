@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
+body {
+  background-color: black;
+  color: #fff;
+  font-family: Tektur;
+  min-width: fit-content;
+}
+
+img {
+  width: 100%;
+  display: inline-block;
+  transition: 0.5s ease;
+}
+
+
+.container {
+  max-width: max(70%, 700px);
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+}
+
+header h3 {
+  color: #61dab6ff;
+  font-size: 24px;
+}
+
+.home h1 {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 116px;
+  min-width: 680px;
+}
+
+.home a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  margin: 0 auto;
+  border: 1px solid transparent;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #6167b6ff;
+  transition: .5s ease;
+}
+
+.home a:hover {
+  border: 1px solid #6167b6ff;
+  background-color: transparent;
+  box-shadow: 0 0 24px #6167b6ff;
+}
+
+
+.frontend h1 {
+  text-align: center;
+  font-weight: lighter;
+  margin-bottom: 80px;
+  letter-spacing: 8px;
+}
+
+
+.frontend .icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 156px);
+  justify-content: space-between;
+  gap: 48px;
+}
+
+
+.frontend .wrapper, .home .wrapper {
+  margin-bottom: 100px;
+}
+
+.backend h1 {
+  text-align: center;
+  font-weight: lighter;
+  margin-bottom: 80px;
+  letter-spacing: 8px;
+}
+
+.backend .icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.backend .icon-grid .img-container {
+  text-align: center; 
+}
+
+.backend .icon-grid .img-container img {
+  display: inline-block;
+  width: 156px;
+}
+
+.mongoose {
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+
+footer h3 {
+  font-weight: lighter;
+}
+
+
+
+
+
