@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Tektur";
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+  transition: .5s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding: 72px 32px;
+}
+
+.not {
+  padding: 32px;
+}
+
+header h3 {
+  color: #ffdf00;
+}
+
+.home .wrapper>* {
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.home a {
+  color: #fff;
+  padding: .75rem;
+  background-color: #6167b6;
+  text-decoration: none;
+  border-radius: .5rem;
+  border: 2px solid transparent;
+  transition: .5s ease;
+}
+
+.home a:hover {
+  box-shadow: 0 0 24px #6167b6;
+  background-color: transparent;
+  border: 2px solid #6167b6;
+}
+
+.frontend h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: lighter;
+}
+
+.icon-grid {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.frontend .icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.backend h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: lighter;
+}
+
+.backend img {
+  width: 65%;
+}
+
+.backend .img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.backend .icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.backend .icon-grid .mongodb {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.backend .icon-grid .mongodb img {
+  width: 100%;
+}
+
+footer h3 {
+  text-align: center;
+  font-weight: lighter;
+}
+
+.react:hover {
+  transform: rotateZ(90deg);
+  filter: drop-shadow(0 0 24px #00ddd8);
+}
+
+.js:hover {
+  filter: drop-shadow(0 0 24px #ffdf00);
+}
+
+.css:hover {
+  filter: drop-shadow(0 0 24px #2196f3);
+}
+
+.html:hover {
+  filter: drop-shadow(0 0 24px #fc490b);
+}
+
+.figma:hover {
+  filter: drop-shadow(0 0 12px #a358ff) drop-shadow(0 0 12px #0acf83);
+}
+
+.inkscape:hover {
+  filter: drop-shadow(0 0 24px #81838d);
+}
+
+.node:hover {
+  filter: drop-shadow(0 0 24px #83cd28);
+}
+
+.php:hover {
+  filter: drop-shadow(0 0 24px #8f9ed1);
+}
+
+.mongodb_:hover {
+  filter: drop-shadow(0 0 24px #409433);
+}
+
+.mongoose:hover {
+  filter: drop-shadow(0 0 24px #850000);
+}
+
+.mysql:hover {
+  filter: drop-shadow(0 0 24px #00608b);
+}
+
+@media (max-width: 640px) {
+  .home h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .icon-grid {
+    max-width: 100%;
+    /* margin: 0 auto; */
+  }
+}
