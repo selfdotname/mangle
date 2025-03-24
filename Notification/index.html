@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Test</title>
+</head>
+<body>
+    <button id="notifyBtn">Send Notification</button>
+
+    <script>
+        document.getElementById("notifyBtn").addEventListener("click", () => {
+            Notification.requestPermission().then(permission => {
+                if (permission === "granted") {
+                    new Notification("Hello! This is a test notification.");
+                } else {
+                    alert("Notification permission denied.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
