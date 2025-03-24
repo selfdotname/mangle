@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+  margin: 0;
+  font-family: "Roboto Mono";
+}
+
+body>*>* {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 2rem 3rem;
+}
+
+iframe {
+  width: 100%;
+  height: 400px;
+  border: 0;
+}
+
+.one,
+.three,
+.five,
+.seven {
+  background-image: linear-gradient(45deg, #7db224ff, #a7e309ff);
+}
+
+.hero .nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.hero .nav img {
+  width: 30px;
+}
+
+.hero .main * {
+  text-align: center;
+}
+
+.hero .main div {
+  margin-bottom: 2rem;
+}
+
+.hero .main img {
+  width: 450px;
+}
+
+.hero .main h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero .main h4 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.services>h2 {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.services .grid {
+  columns: 4;
+}
+
+.services .grid img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.services .grid p {
+  text-align: center;
+}
+
+.each-service .gallery {
+  columns: 3;
+  margin-bottom: 3rem;
+}
+
+.each-service>h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 4rem;
+}
+
+.each-service .gallery img {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
+.each-service .order-now {
+  text-decoration: none;
+  padding: 1rem;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  margin: 0 auto 5rem;
+  display: block;
+  width: fit-content;
+  border-radius: 1.5rem;
+  font-weight: bold;
+}
+
+.each-service>p {
+  color: #fff;
+}
+
+.ceo,
+.coo {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.ceo img,
+.coo img {
+  width: 300px;
+  border-radius: 1rem;
+}
+
+.ceo>div,
+.coo>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.location>h1 {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.location>div {
+  display: flex;
+  gap: 1rem;
+}
+
+.location>div>aside>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.location>div>div img {
+  width: 50px;
+  vertical-align: middle;
+}
+
+.location>div>div>div {
+  margin-bottom: 5rem;
+}
+
+.location>div>div {
+  flex-shrink: 1;
+}
+
+.location aside img {
+  width: 100%;
+  flex-shrink: 1;
+}
+
+.seven {
+  color: #fff;
+}
+
+
+@media (max-width: 640px) {
+  .hero .main img {
+    width: 300px;
+  }
+
+  .hero .main h4 {
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  .location>div {
+    display: block;
+  }
+
+  .ceo,
+  .coo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+  
+  .services .grid {
+    columns: 2;
+  }
+
+  .each-service .gallery {
+    columns: 2;
+    margin-bottom: 3rem;
+  }
+}
