@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Federant&family=Space+Grotesk:wght@300..700&display=swap');
+    * {
+      font-family: "Space Grotesk";
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      color: #fff;
+      background-color: blue;
+    }
+    
+    .ball {
+      border-radius: 50%;
+      background-color: lightblue;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .ball.last {
+      border: 1px solid;
+      background-color: transparent;
+    }
+    
+    .date {
+      border-left: 2px solid;
+      margin-left: .75rem;
+      padding-left: 1rem;
+      padding-bottom: 1rem;
+    }
+    
+    .date.last {
+      border-left: none;
+    }
+
+    .center_block {
+      max-width: 768px;
+      margin: 0 auto;
+      /* padding: 1rem; */
+    }
+
+    .naira {
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .balance {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    button {
+      border-radius: 1rem;
+      padding: .75rem 1rem;
+      border: 0;
+      outline: 0;
+      background-color: transparent;
+      color: inherit;
+      border: 1px solid;
+      font-weight: bold;
+    }
+
+    button:hover:not(:disabled) {
+      background-color: #fff;
+      color: blue;
+    }
+
+    button:disabled {
+      background-color: lightblue;
+      border: none;
+    }
+
+    .content {
+      margin-bottom: 2rem;
+      padding: 1rem;
+    }
+
+    .content.main > * {
+      margin-bottom: .5rem;
+      font-weight: lighter;
+    }
+
+    .content.dates > div {
+      margin-bottom: .5rem;
+      font-weight: bold;
+    }
+
+    .content.dates > div > .date {
+      font-weight: bold;
+    }
+
+    .kobo {
+      font-weight: bold;
+    }
+
+    .content.main {
+      background-color: #fff;
+      color: black;
+      border-radius: 1rem;
+    }
+
+    .content.mining_session {
+      border-bottom: 1px solid;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .content.withdraw {
+      padding: 0;
+      padding-left: 1rem;
+      margin: 0;
+      margin-bottom: 1rem;
+    }
+
+    .kobo {
+      font-size: 1.5rem;
+    }
+  </style>
+
+  <main>
+    <div class="center_block">
+      <div class="content" style="padding: 0;background-color: lightblue;color: blue;display: flex;padding: 3rem 1rem;gap: 2rem;">
+        <img src="blockchain.png" style="width: 3rem;height: 3rem;align-self: center;" alt=""><h1 style="font-style: italic;margin: 0;">Blockchain Investments</h1>
+      </div>
+      <div class="container" style="margin-bottom: 1rem;">
+        <span>Hello</span>, <span style="font-weight: bold;font-size: 1.2rem;">Augustine Ifejika</span>
+      </div>
+      <div class="content main">
+        <div>
+          Balance available for withdrawal:
+        </div>
+        <div class="full_balance">
+          <span class="naira">&#8358;</span><span class="balance">123,456</span> . <span class="kobo">12</span>
+        </div>
+        <div>
+          <span>Withdrawal unavailable until mining session ends</span>
+        </div>
+      </div>
+      <div class="content withdraw">
+        <button disabled>Widthdraw</button>
+      </div>
+      <div class="content mining_session">
+        Mining Sessions
+      </div>
+      <div class="content dates">
+        <div>
+          <span class="ball"></span> + &#8358;50,000
+          <div class="date">March 15th, 2025 (First Session)</div>
+        </div>
+        <div>
+          <span class="ball last"></span> + &#8358;50,000
+          <div class="date">April 15th, 2025 (Second Session)</div>
+        </div>
+        <div>
+          <span class="ball last"></span> + &#8358;50,000
+          <div class="date last">May 15th, 2025 (Third Session)</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    requestAnimationFrame(calculate_time)
+    
+    function calculate_time() {
+      const fulltime_ms = new Date('2025-05-15') - new Date('2025-02-15')
+      var rate = 150_000 / fulltime_ms
+
+      const current_ms = new Date() - new Date('2025-02-15')
+      const current_amount = current_ms * rate
+
+      const [whole, decimal] = current_amount.toString().split('.')
+
+      const html = 
+      `
+      <span class="naira">&#8358;</span><span class="balance">${parseInt(whole).toLocaleString()}</span> . <span class="kobo">${decimal[0]}${decimal[1]}</span>
+
+      `
+
+      document.querySelector('.full_balance').innerHTML = html
+
+      setTimeout(function() {
+        requestAnimationFrame(calculate_time)
+      }, 1500)
+    }
+  </script>
+</body>
+
+</html>
